@@ -13,6 +13,7 @@ spec:
   replicas: 10
   template:
     metadata:
+      namespace: webapp
       labels:
         mytest: test
       name: mynginx
