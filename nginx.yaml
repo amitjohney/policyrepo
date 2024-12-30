@@ -2,6 +2,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    kustomize.toolkit.fluxcd.io/ssa: Merge
   name: testdeployment
   labels:
     mytest: test
