@@ -3,13 +3,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: testdeployment
+  annotations:
+    kustomize.toolkit.fluxcd.io/ssa: Ignore
   labels:
     mytest: test
 spec:
   selector:
     matchLabels:
       mytest: test
-  replicas: 4
+  replicas: 10
   template:
     metadata:
       labels:
