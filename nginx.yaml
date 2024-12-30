@@ -2,8 +2,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kustomize.toolkit.fluxcd.io/ssa: IfNotPresent
   name: testdeployment
   labels:
     mytest: test
@@ -11,7 +9,7 @@ spec:
   selector:
     matchLabels:
       mytest: test
-  replicas: 3
+  replicas: 4
   template:
     metadata:
       labels:
