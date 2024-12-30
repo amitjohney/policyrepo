@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    kustomize.toolkit.fluxcd.io/ssa: Ignore
+    kustomize.toolkit.fluxcd.io/ssa: Merge
   namespace: default
   name: testdeployment2
   labels:
@@ -12,7 +12,7 @@ spec:
   selector:
     matchLabels:
       mytest: test
-  replicas: 5
+  replicas: 2
   template:
     metadata:
       namespace: webapp
