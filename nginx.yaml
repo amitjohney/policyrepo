@@ -3,8 +3,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: testdeployment
-  annotations:
-    kustomize.toolkit.fluxcd.io/ssa: Override
   labels:
     mytest: test
 spec:
