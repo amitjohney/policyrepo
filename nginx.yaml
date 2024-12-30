@@ -9,6 +9,8 @@ spec:
   replicas: 3
   template:
     metadata:
+      labels:
+        mytest: test
       name: mynginx
     spec:
       containers:
