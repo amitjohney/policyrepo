@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: webapp
-  name: testdeployment
+  name: testdeployment2
   labels:
     mytest: test
 spec:
