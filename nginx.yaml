@@ -2,7 +2,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: webapp
+  annotations:
+    kustomize.toolkit.fluxcd.io/ssa: IfNotPresent
+  namespace: default
   name: testdeployment2
   labels:
     mytest: test
@@ -10,7 +12,7 @@ spec:
   selector:
     matchLabels:
       mytest: test
-  replicas: 10
+  replicas: 5
   template:
     metadata:
       namespace: webapp
