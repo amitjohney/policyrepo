@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    kustomize.toolkit.fluxcd.io/ssa: enabled
+    kustomize.toolkit.fluxcd.io/ssa: IfNotPresent
   name: testdeployment
   labels:
     mytest: test
@@ -11,7 +11,7 @@ spec:
   selector:
     matchLabels:
       mytest: test
-  replicas: 5
+  replicas: 1
   template:
     metadata:
       labels:
