@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: default
+  namespace: webapp
   name: testdeployment2
   labels:
     mytest: test
