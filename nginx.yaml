@@ -6,6 +6,9 @@ metadata:
   labels:
     mytest: test
 spec:
+  selector:
+    matchLabels:
+      mytest: test
   replicas: 3
   template:
     metadata:
