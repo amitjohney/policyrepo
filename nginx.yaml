@@ -11,7 +11,7 @@ spec:
   selector:
     matchLabels:
       mytest: test
-  replicas: 3
+  replicas: 5
   template:
     metadata:
       labels:
